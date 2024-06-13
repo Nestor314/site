@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile_containner.css">
+    <link rel="stylesheet" href="css/conversation_modal.css">
+    <link rel="stylesheet" href="css/applications.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Главная страница</title>
+    <link rel="shortcut icon" type="image/jpg"
+          href="images/icon.png"/>
+</head>
+<body>
+
+<!--
+<div class="navigation">
+  <button class="nav-button">Головна</button>
+  <button class="nav-button">Чат</button>
+
+</div> -->
+
+<div class="navigation">
+    <div class="navigation-wrapper">
+        <div class="nav-group">
+            <button id="mainFrameButton" class="nav-button">Головна</button>
+            <button id="nav-button" class="nav-button">Чат</button>
+        </div>
+        <div class="nav-group">
+            <button id="profileButton" class="nav-button" style="display: none;">Профіль</button>
+            <button id="loginButton" class="nav-button">Увійти</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="foo-group">
+        <button class="foo-button">Зворотній зв’язок</button>
+        <button class="foo-button">Пропозиції та побажання</button>
+        <button class="foo-button">Допомога</button>
+    </div>
+</div>
+
+
+<div id="loginModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" style="display: none;">&times;</span>
+        <h2>Авторизация</h2>
+        <input type="text" placeholder="admin" name="login" class="login-input" id="login">
+        <input type="password" placeholder="admin" name="password" class="login-input" id="password">
+        <button class="authbutton" onclick="login()">Увійти</button>
+        <button class="authbutton">Реєстрація</button>
+    </div>
+</div>
+<div id="chatModal" class="modal" style="display:none;">
+    <div class="chat-content">
+        <div class="chat-container">
+            <div class="conversations">
+                <div class="conversation-item">Ann</div>
+                <div class="conversation-item">Kevin</div>
+                <div class="conversation-item">Paul</div>
+            </div>
+            <div class="chat-section">
+                <div class="chat-header">
+                    <h2>&emsp;Ann</h2>
+                </div>
+                <div class="chat-body">
+                    <div class="messages" id="messages">
+                        <div class="message other-person">
+                            <span class="message-content">Привіт! Як справи?</span>
+                            <span class="message-time-other-person">10:00 AM</span>
+                        </div>
+                        <div class="message my-message">
+                            <span class="message-content">Все супер. А в тебе як?</span>
+                            <span class="message-time">10:10 AM</span>
+                        </div>
+                        <div class="message other-person">
+                            <span class="message-content">По тихеньку. Будеш сьогодні грати?</span>
+                            <span class="message-time-other-person">10:15 AM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chatInput" placeholder="Поле для вводу тексту...">
+                    <img class="sendBtn" src="images/send_button.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mainFrame" style="display: block;">
+    <div class="search-container">
+        <h3>Пошук ігор</h3>
+        <h6>введіть назву гри</h6>
+        <div class="search-inpt">
+            <input type="text" id="search" class="search-input" placeholder="Назва гри">
+            <button class="search-button" onclick="search()">Пошук</button>
+        </div>
+    </div>
+    <div class="game-games">
+        <h3>Популярні ігри</h3>
+    </div>
+    <div class="game-grid">
+        <div id="dota">
+            <a class="game-link" id="dota_game">
+                <img src="images/dota2.png" alt="Dota 2">
+                <span>Dota 2</span>
+            </a>
+        </div>
+        <div id="lol">
+            <a class="game-link" id="lol_game">
+                <img src="images/lol.png" alt="League of Legends">
+                <span>League of Legends</span>
+            </a>
+        </div>
+        <div id="minecraft">
+            <a class="game-link" id="minecraft_game">
+                <img src="images/minecraft.png" alt="Minecraft">
+                <span>Minecraft</span>
+            </a>
+        </div>
+        <div id="valorant">
+            <a class="game-link" id="valorant_game">
+                <img src="images/valorant.png" alt="Valorant">
+                <span>Valorant</span>
+            </a>
+        </div>
+        <div id="cs2">
+            <a class="game-link" id="cs2_game">
+                <img src="images/counter_strike2.png" alt="Counter Strike 2">
+                <span>Counter Strike 2</span>
+            </a>
+        </div>
+        <div id="overwatch">
+            <a class="game-link" id="overwatch_game">
+                <img src="images/overwatch2.png" alt="Overwatch 2">
+                <span>Overwatch 2</span>
+            </a>
+        </div>
+        <div id="pubg">
+            <a class="game-link" id="pubg_game">
+                <img src="images/pubg.png" alt="PUBG">
+                <span>PUBG</span>
+            </a>
+        </div>
+        <div id="fortnite">
+            <a class="game-link" id="fortnite_game">
+                <img src="images/fortnite.png" alt="Fortnite">
+                <span>Fortnite</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div class="myProfileFrame" style="display: none;">
+    <div class="profile-container">
+        <div class="profile-nickname">
+            <h3>Jack123</h3>
+        </div>
+        <div class="profile-profile">
+            <div class="profile-header">
+                <h3>Загальна інформація</h3>
+            </div>
+            <div class="profile-content">
+                <div class="profile-picture">
+                    <img src="images/user-placeholder.png" alt="User Picture">
+                </div>
+                <div class="profile-info">
+                    <p><span>Вік:</strong></span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;21 рік</p>
+                    <p><span>Стать:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Чоловік</p>
+                    <p><span>Був онлайн:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;5 годин тому</p>
+                    <p><span>Дата реєстрації:</span> &emsp;&emsp;&emsp;&ensp;22.02.2024</p>
+                </div>
+            </div>
+            <div class="profile-contacts">
+                <h4>Налаштування</h4>
+                <button class="contact-button">Редагувати профіль</button>
+                <button class="contact-button" onclick="exit()">Вийти з аккаунту</button>
+            </div>
+        </div>
+        <div class="profile-nickname">
+            <h3>Ваші активні заявки</h3>
+        </div>
+        <div class="application-mark">
+            <div class="application-wrapper">
+                <button>Platinum2 шукаю команду/напарника щоб старатися у рангових іграх та прогресувати. Вся
+                    статистика та інша інфа в <br>тг: t.me/KvooD37<br>21років
+                </button>
+                <button>паті з двох челіків шукає снайпера, рифлера та саппорта для гри в рмм, рейтинг золото,
+                    бажаючі
+                    провести вечір у приємній компанії і попітніти пишіть) дс: killmebbking<br>21років
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="someoneProfileFrame" style="display: none;">
+    <div class="profile-container">
+        <div class="profile-nickname">
+            <h3>Ann</h3>
+        </div>
+        <div class="profile-profile">
+            <div class="profile-header">
+                <h3>Загальна інформація</h3>
+            </div>
+            <div class="profile-content">
+                <div class="profile-picture">
+                    <img src="images/user-placeholder.png" alt="User Picture">
+                </div>
+                <div class="profile-info">
+                    <p><span>Вік:</strong></span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;20 рік</p>
+                    <p><span>Стать:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Жіноча</p>
+                    <p><span>Був онлайн:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;6 годин тому</p>
+                    <p><span>Дата реєстрації:</span> &emsp;&emsp;&emsp;&ensp;24.02.2023</p>
+                </div>
+            </div>
+            <div class="profile-contacts">
+                <h4>Контакти</h4>
+                <button class="contact-button">Особисті повідомлення</button>
+            </div>
+        </div>
+        <div class="profile-nickname">
+            <h3>Активні заявки</h3>
+        </div>
+        <div class="application-mark">
+            <div class="application-wrapper">
+                <button>Шукаю напарника/напарницю
+                    для гри я Г2, твоє звання не важливо,
+                    якщо потрібно навчити, то
+                    розповім, що знаю сам, хоча
+                    самому варто було б повчитися <br>20років
+                </button>
+                <button>Просто провести гарно час,
+                    посміятися, рейт/анрейт.
+                    На ранг байдуже. Пік золото 2,
+                    зараз срібло 2. Головне щоб
+                    було весело))) telegram: wiseowlme<br>20років
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="applicationsFrame" style="display: none;">
+    <div class="application-frame">
+        <div class="application-header">
+            <h3>Заяви гравців у Valorant</h3>
+        </div>
+        <div class="application-grid">
+            <div class="application-grid-item">
+                <button>Шукаю напарника/напарницю
+                    для гри, здебільшого по фану,
+                    я Г2, твоє звання не важливо,
+                    якщо потрібно навчити, то
+                    розповім, що знаю сам, хоча
+                    самому варто було б повчитися <br>20років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Хлопець 25 років, шукаю тиммейтів
+                    для ігор у Валорант по фану
+                    і просто спілкування.
+                    Ранг від бронзи до золота 3.
+                    Спілкування через дс.
+                    Дс: beg1nnner
+                    Тг: Beg1nnnner<br>25років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Шукаю напарника для рейтингу
+                    Від срібла до платини (я Срібло 3 -
+                    Максимум платина 2)
+                    від 16 років
+                    Додавайте в дс - 4ерноснейка.
+                    Не відповідаю на повідомлення
+                    на сайті!<br>17років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Всім привіт) Шукаю напарників для
+                    спільної гри у бистрі. Хочеться разом кайфувати
+                    від грита розвиватися. Перший
+                    досвід у Валоранті, тому скіл
+                    слабкий, але завжди намагаюся
+                    викладатися на всю.
+                    <br>24років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Привет! Меня зовут Артём,
+                    мне 21 год. Я ищу сокомандницу
+                    в возрасте от 18 до 22 лет для
+                    увлекательных игр, интересных
+                    разговорови просто приятного
+                    времяпровождения. 😊🎮🌟 Мой дс - lilxyper<br>21років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Всім привіт. Буду радий партнеру
+                    для спільної гри. Нині з'явилося
+                    набагато більше вільного часу
+                    тому повернувся у валорант.<br>19років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Всем привет, ищу команду для
+                    премьера и игр вместе с будущим
+                    развитием в киберспорт, роль могу
+                    занять любую, главное заранее
+                    узнать и начать готовиться,
+                    задротитьэту роль, сейчас
+                    звание д3 <br>20років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Вітаю, шукаю тимейтів для
+                    приємногопроведення часу
+                    у Valorant.
+                    Я новачок у цій грі (ранг Бронза 2).
+                    Одному грати вкрай нудно,
+                    так що хотілося б знайти
+                    кого-небудь.<br>18років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Просто провести гарно час,
+                    посміятися, рейт/анрейт.
+                    На ранг байдуже. Пік золото 2,
+                    зараз срібло 2. Головне щоб
+                    було весело))) telegram: wiseowlme<br>25років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>паті з двох челіків шукає снайпера,
+                    рифлера та саппорта для гри
+                    в рмм, рейтинг золото, бажаючі
+                    провести вечір у приємній
+                    компанії і попітніти пишіть)
+                    дс: killmebbking<br>20років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Всім добрий вечір/день. Нещодавно
+                    почав грати, відкрив рейтинг,
+                    з героїв рейну та брич. Чесно
+                    скажу, взагалі не розумію що та як у
+                    цій грі, хотілося б знайти
+                    просто гравця який може навчити
+                    грати чи хоча б базовим речам.<br>22років
+                </button>
+            </div>
+            <div class="application-grid-item">
+                <button>Platinum2 шукаю команду/напарника
+                    щоб старатися у рангових іграх та
+                    прогресувати. Вся статистика та
+                    інша інфа в тг: t.me/KvooD37<br>17років
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

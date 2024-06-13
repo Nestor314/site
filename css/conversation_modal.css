@@ -1,0 +1,161 @@
+.chat-content {
+    position: absolute;
+    left: 0;
+    top: 6%;
+    /*transform: translate(0%, -30%);*/
+    background-color: transparent;
+    width: 70%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chat-container {
+    position: sticky;
+    border: 1px solid black;
+    display: flex;
+    height: 500px;
+}
+
+.conversations {
+
+    color: rgba(210, 187, 243, 1);
+    width: 20%;
+    border-right: 1px solid black;
+    padding: 10px;
+    background: rgba(41, 57, 101, 1);
+}
+
+.conversations h3 {
+    margin-top: 0;
+}
+
+.conversation-item {
+    padding: 10px;
+    color: rgba(210, 187, 243, 1);
+    cursor: pointer;
+}
+
+.conversation-item:hover {
+    color: rgba(41, 57, 101, 1);
+    background: rgba(157, 134, 242, 1);
+}
+
+.chat-section {
+
+    background: transparent;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    fill-opacity: 0;
+    padding-top: 10px;
+    color: rgba(24, 45, 88, 1);
+    background: rgba(157, 134, 242, 0.9);
+}
+
+.chat-footer {
+    width: 100%;
+    padding-right: 10px;
+    background: rgba(210, 187, 243, 0.98);
+}
+
+.chat-body {
+    flex: 1;
+
+    background: rgba(210, 187, 243, 0.98);
+    padding: 10px;
+    max-height: 100%;
+    overflow-y: hidden;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+}
+
+.messages div {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+#chatInput {
+    width: 80%;
+    background: transparent;
+    color: rgba(24, 45, 88, 1);
+    border: 0;
+    color: black;
+    padding: 10px;
+}
+
+#chatInput:focus {
+    outline: none;
+    border: none;
+}
+
+#chatInput::placeholder {
+    color: rgba(24, 45, 88, 1); /* Desired placeholder color */
+}
+
+#sendBtn {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    color: black;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    max-width: 70%;
+    position: relative;
+}
+
+.message-content {
+    display: block;
+}
+
+.my-message {
+    align-self: flex-end;
+}
+
+.other-person {
+    align-self: flex-start;
+}
+
+.message-time-other-person {
+    font-size: 0.8em;
+    color: #777;
+    position: sticky;
+    bottom: -10px;
+    right: 0px;
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: #777;
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+}
+
+.sendBtn {
+    align-self: flex-end;
+    padding-left: 7%;
+    color: transparent;
+    max-width: 15%;
+    min-height: 40px;
+}
