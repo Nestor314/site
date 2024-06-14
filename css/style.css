@@ -2,9 +2,9 @@
 html, body {
     font-family: Jost, sans-serif;
     color: white;
-    margin: 0; /* Убирает стандартные отступы */
-    padding: 0; /* Убирает стандартные внутренние отступы */
-    overflow-x: hidden; /* Предотвращает появление горизонтального скроллбара */
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -14,49 +14,49 @@ html, body {
 }
 
 body {
-    background-image: url('../images/main_background.png'); /* Укажите ваше изображение */
-    background-size: cover; /* Гарантирует, что изображение покроет весь доступный пространство */
-    background-position: center; /* Центрирует изображение по центру */
-    background-repeat: no-repeat; /* Не повторяет изображение */
-    background-attachment: fixed; /* Фиксирует изображение при прокрутке */
+    background-image: url('../images/main_background.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
 
 .bg-header {
-    background-color: #34034A; /* Цвет фона шапки */
-    color: white; /* Цвет текста в шапке */
+    background-color: #34034A; 
+    color: white;
 }
 
 .nav-item {
-    padding: 10px 20px; /* Отступы для элементов навигации */
-    display: inline-block; /* Для горизонтального расположения */
+    padding: 10px 20px; 
+    display: inline-block; 
 }
 
 .input-group {
-    padding: 10px 0; /* Отступы для поля поиска */
+    padding: 10px 0;
 }
 
 .input-group input {
-    border-radius: 20px; /* Скругленные углы у поля ввода */
-    border: 1px solid #888; /* Цвет и стиль границы */
+    border-radius: 20px; 
+    border: 1px solid #888;
 }
 
 .btn-game {
-    background-color: #6C0785; /* Фиолетовый цвет кнопок */
-    color: white; /* Белый текст на кнопках */
-    border: none; /* Без границ */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для кнопок */
-    padding: 10px 20px; /* Отступы внутри кнопок */
-    border-radius: 10px; /* Скругление углов кнопок */
+    background-color: #6C0785; 
+    color: white; 
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 10px 20px; 
+    border-radius: 10px; 
 }
 
 .btn-game:hover {
-    background-color: #7A0E95; /* Цвет кнопки при наведении */
+    background-color: #7A0E95; 
 }
 
 .container {
-    width: 100%; /* Задаем ширину контейнера */
-    max-width: 1200px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Центрируем контейнер */
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .game-grid {
@@ -66,10 +66,10 @@ body {
     min-height: 588px;
     grid-template-rows: repeat(2, 4fr);
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки с равной шириной */
-    gap: 20px; /* Расстояние между элементами */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
     padding: 50px;
-    justify-content: center; /* Центрирование содержимого */
+    justify-content: center; 
 }
 
 .game-link {
@@ -83,22 +83,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Полная ширина ячейки */
+    width: 100%; 
     min-height: 200px;
     text-decoration: none;
-    height: 100%; /* Полная высота ячейки */
-    transition: transform 0.2s; /* Smooth scaling */
+    height: 100%; 
+    transition: transform 0.2s; 
 }
 
 .game-link:hover {
     z-index: 999;
 
     text-decoration: none;
-    transform: scale(1.15); /* Scale up on hover */
+    transform: scale(1.15); 
 }
 
 .game-link img {
-    max-width: 120px; /* Максимальная ширина изображения */
+    max-width: 120px; 
 
     height: auto;
     margin-top: auto;
@@ -106,18 +106,17 @@ body {
 
 .game-link span {
     font-size: 26px;
-    /* font-weight: 600; */
+    
     color: #182D58;
 
     text-decoration: none;
     font-variant: small-caps;
     text-align: center;
-    width: 100%; /* Занимает всю ширину контейнера */
-    margin-top: auto; /* Автоматический верхний отступ */
+    width: 100%; 
+    margin-top: auto; 
 }
 
 
-/* Стили для фона модального окна */
 .modal {
     position: fixed;
     left: 0;
@@ -129,7 +128,6 @@ body {
     justify-content: center; /* Центрирование по горизонтали */
 }
 
-/* Стили для контента модального окна */
 .modal-content {
     background-color: #D2BBF3;
     color: rgba(24, 45, 88, 1);
@@ -137,7 +135,7 @@ body {
     padding: 50px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Устанавливаем конкретную ширину для консистентности */
+    width: 400px;
     align-items: center;
     position: fixed;
     right: 50%;
@@ -150,7 +148,7 @@ body {
 }
 
 input[type="text"], input[type="password"] {
-    width: 100%; /* Полная ширина в контейнере */
+    width: 100%;
     padding: 8px;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -194,8 +192,8 @@ button {
 
 .navigation-wrapper {
     display: flex;
-    justify-content: space-between; /* Выравниваем элементы по центру по горизонтали */
-    width: 50%; /* Ширина родительского контейнера */
+    justify-content: space-between; 
+    width: 50%;
     transform: translate(50%, 0%);
 }
 
@@ -205,7 +203,7 @@ button {
     height: 6%;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Разделяем контент на две группы */
+    justify-content: space-between; 
     background-color: rgba(210, 187, 243, 0.75);
     padding: 0.3% 1%;
     z-index: 999;
@@ -213,8 +211,7 @@ button {
 
 .nav-group {
     display: flex;
-    gap: 20px; /* Расстояние между кнопками в группе */
-    /* padding: 30px; */
+    gap: 20px; 
 }
 
 .nav-button {
@@ -223,7 +220,7 @@ button {
     border: none;
 
     padding: 5px 15px;
-    position: relative; /* Для позиционирования псевдо-элемента */
+    position: relative;
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -232,19 +229,19 @@ button {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%; /* Начальная позиция по центру */
-    width: 0; /* Начальная ширина линии */
-    height: 9px; /* Высота линии */
-    background-color: #182D58; /* Цвет линии */
+    left: 50%;
+    width: 0; 
+    height: 9px; 
+    background-color: #182D58; 
     border-radius: 2px;
-    transition: width 0.3s ease, left 0.3s ease; /* Плавная анимация */
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
 .nav-button:hover::after,
-.nav-button:focus::after, /* Для активации кнопки с клавиатуры */
+.nav-button:focus::after,
 .nav-button:active::after {
-    width: 100%; /* Увеличиваем ширину линии при наведении или нажатии */
-    left: 0; /* Перемещаем линию влево */
+    width: 100%; 
+    left: 0;
 }
 
 .footer {
@@ -261,9 +258,9 @@ button {
 
 .foo-group {
     display: flex;
-    gap: 20px; /* Расстояние между кнопками в группе */
-    justify-content: center; /* Выравниваем элементы по центру по горизонтали */
-    width: 100%; /* Ширина родительского контейнера */
+    gap: 20px;
+    justify-content: center; 
+    width: 100%; 
 }
 
 .foo-button {
@@ -272,20 +269,20 @@ button {
     border: none;
     width: auto;
     padding: 0 15px;
-    position: relative; /* Для позиционирования псевдо-элемента */
+    position: relative; 
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .foo-button:hover {
-    color: white; /* Цвет при наведении */
+    color: white;
 }
 
 .search-container {
     align-items: center;
     background: rgba(255, 255, 255, 0.15);
-    width: 100%; /* Установите фиксированную ширину для контейнера */
-    margin: 20px auto; /* Центрирование контейнера на странице */
+    width: 100%; 
+    margin: 20px auto; 
     padding: 10px 100px;
 }
 
@@ -305,17 +302,17 @@ button {
     display: inline-flex;
     align-items: center;
     vertical-align: center;
-    width: 100%; /* Установите фиксированную ширину для контейнера */
-    max-width: 1100px; /* Максимальная ширина контейнера */
-    margin: 20px auto; /* Центрирование контейнера на странице */
+    width: 100%; 
+    max-width: 1100px; 
+    margin: 20px auto; 
     background-color: transparent;
-    padding: 8px; /* Внутренние отступы */
+    padding: 8px; 
 }
 
 .search-input {
     padding: 10px;
     font-size: 24px;
-    border-radius: 30px !important; /* Скругленные углы слева */
+    border-radius: 30px !important; 
     outline: 2px solid rgba(24, 45, 88, 1);
     margin-right: 10px;
 
