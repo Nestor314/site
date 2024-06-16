@@ -9,10 +9,10 @@
     min-height: 588px;
     grid-template-rows: repeat(2, 4fr);
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки с равной шириной */
-    gap: 10px; /* Расстояние между элементами */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
     padding: 50px;
-    justify-content: center; /* Центрирование содержимого */
+    justify-content: center; 
 }
 
 .application-header h3 {
@@ -34,14 +34,14 @@
     text-align: center;
     display: inline-block;
     cursor: pointer;
-    transition: transform 0.2s; /* Smooth scaling */
+    transition: transform 0.2s; 
 }
 
 .application-grid-item button:hover {
     z-index: 999;
 
     background-color: rgba(210, 187, 243, 1);
-    transform: scale(1.15); /* Scale up on hover */
+    transform: scale(1.15); 
 }
 
 .application-grid-item button::before,
@@ -55,9 +55,9 @@
 }
 
 .application-grid-item button::before {
-    top: 6%; /* Adjust the distance from the button */
+    top: 6%; 
 }
 
 .application-grid-item button::after {
-    bottom: 6%; /* Adjust the distance from the button */
+    bottom: 6%;
 }

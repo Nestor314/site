@@ -2,7 +2,6 @@
     position: absolute;
     left: 0;
     top: 6%;
-    /*transform: translate(0%, -30%);*/
     background-color: transparent;
     width: 70%;
     max-width: 800px;
@@ -100,7 +99,7 @@
 }
 
 #chatInput::placeholder {
-    color: rgba(24, 45, 88, 1); /* Desired placeholder color */
+    color: rgba(24, 45, 88, 1); 
 }
 
 #sendBtn {

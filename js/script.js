@@ -29,9 +29,7 @@ function login() {
     const username = document.getElementById('login').value;
     const password = document.getElementById('password').value;
 
-    // Проверка данных (замените на вашу логику проверки)
     if (username === 'admin' && password === 'admin') {
-        // Переход на другую страницу при успешной авторизации
         document.getElementById('profileButton').style.display = "block";
         document.getElementById('loginButton').style.display = "none";
         document.getElementById('loginModal').style.display = 'none';
@@ -113,7 +111,6 @@ document.getElementById('mainFrameButton').onclick = function () {
     }
 }
 Array.from(application_grid_item).forEach(function (element) {
-    // Add an onclick event listener to each element
     element.onclick = function () {
         var mainFrames = document.getElementsByClassName('mainFrame');
         var applicationsFrames = document.getElementsByClassName("applicationsFrame");
@@ -137,7 +134,6 @@ Array.from(application_grid_item).forEach(function (element) {
 })
 
 Array.from(application_grid_item).forEach(function (element) {
-    // Add an onclick event listener to each element
     element.onclick = function () {
         var mainFrames = document.getElementsByClassName('mainFrame');
         var applicationsFrames = document.getElementsByClassName("applicationsFrame");
@@ -171,11 +167,9 @@ document.querySelectorAll('.game-link').forEach(function (element) {
         "pubg_game": "PUBG",
         "fortnite_game": "Fortnite"
     };
-    // Add an onclick event listener to each element
     element.onclick = function (event) {
-        event.preventDefault(); // Prevent default link behavior
+        event.preventDefault();
 
-        // Get the ID of the clicked element's closest parent with class 'game-link'
         var mainFrames = document.getElementsByClassName('mainFrame');
         var applicationsFrames = document.getElementsByClassName("applicationsFrame");
         var myprofileFrames = document.getElementsByClassName('myProfileFrame');
