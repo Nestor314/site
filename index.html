@@ -46,7 +46,7 @@
 
 
 <div id="loginModal" class="modal" style="display:none;">
-    <div class="modal-content">
+    <div class="frame-wrapper">
         <span class="close" style="display: none;">&times;</span>
         <h2>Авторизация</h2>
         <input type="text" placeholder="admin" name="login" class="login-input" id="login">
@@ -85,76 +85,77 @@
                 </div>
                 <div class="chat-footer">
                     <input type="text" id="chatInput" placeholder="Поле для вводу тексту...">
-                    <img class="sendBtn" src="images/send_button.png" alt = "Send Button">
+                    <img class="sendBtn" src="images/send_button.png" alt="Send Button">
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="mainFrame" style="display: block;">
-    <div class="search-container">
-        <h3>Пошук ігор</h3>
-        <h6>введіть назву гри</h6>
-        <div class="search-inpt">
-            <input type="text" id="search" class="search-input" placeholder="Назва гри">
-            <button class="search-button" onclick="search()">Пошук</button>
+<div class="mainFrame" style="display: none;">
+    <div class="mainFrame-wrapper">
+        <div class="search-container">
+            <h3>Пошук ігор</h3>
+            <h6>введіть назву гри</h6>
+            <div class="search-inpt">
+                <input type="text" id="search" class="search-input" placeholder="Назва гри">
+                <button class="search-button" onclick="search()">Пошук</button>
+            </div>
+        </div>
+        <div class="game-games">
+            <h3>Ігри</h3>
+        </div>
+        <div class="game-grid">
+            <div id="dota">
+                <a class="game-link" id="dota_game">
+                    <img src="images/dota2.png" alt="Dota 2">
+                    <span>Dota 2</span>
+                </a>
+            </div>
+            <div id="lol">
+                <a class="game-link" id="lol_game">
+                    <img src="images/lol.png" alt="League of Legends">
+                    <span>League of Legends</span>
+                </a>
+            </div>
+            <div id="minecraft">
+                <a class="game-link" id="minecraft_game">
+                    <img src="images/minecraft.png" alt="Minecraft">
+                    <span>Minecraft</span>
+                </a>
+            </div>
+            <div id="valorant">
+                <a class="game-link" id="valorant_game">
+                    <img src="images/valorant.png" alt="Valorant">
+                    <span>Valorant</span>
+                </a>
+            </div>
+            <div id="cs2">
+                <a class="game-link" id="cs2_game">
+                    <img src="images/counter_strike2.png" alt="Counter Strike 2">
+                    <span>Counter Strike 2</span>
+                </a>
+            </div>
+            <div id="overwatch">
+                <a class="game-link" id="overwatch_game">
+                    <img src="images/overwatch2.png" alt="Overwatch 2">
+                    <span>Overwatch 2</span>
+                </a>
+            </div>
+            <div id="pubg">
+                <a class="game-link" id="pubg_game">
+                    <img src="images/pubg.png" alt="PUBG">
+                    <span>PUBG</span>
+                </a>
+            </div>
+            <div id="fortnite">
+                <a class="game-link" id="fortnite_game">
+                    <img src="images/fortnite.png" alt="Fortnite">
+                    <span>Fortnite</span>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="game-games">
-        <h3>Ігри</h3>
-    </div>
-    <div class="game-grid">
-        <div id="dota">
-            <a class="game-link" id="dota_game">
-                <img src="images/dota2.png" alt="Dota 2">
-                <span>Dota 2</span>
-            </a>
-        </div>
-        <div id="lol">
-            <a class="game-link" id="lol_game">
-                <img src="images/lol.png" alt="League of Legends">
-                <span>League of Legends</span>
-            </a>
-        </div>
-        <div id="minecraft">
-            <a class="game-link" id="minecraft_game">
-                <img src="images/minecraft.png" alt="Minecraft">
-                <span>Minecraft</span>
-            </a>
-        </div>
-        <div id="valorant">
-            <a class="game-link" id="valorant_game">
-                <img src="images/valorant.png" alt="Valorant">
-                <span>Valorant</span>
-            </a>
-        </div>
-        <div id="cs2">
-            <a class="game-link" id="cs2_game">
-                <img src="images/counter_strike2.png" alt="Counter Strike 2">
-                <span>Counter Strike 2</span>
-            </a>
-        </div>
-        <div id="overwatch">
-            <a class="game-link" id="overwatch_game">
-                <img src="images/overwatch2.png" alt="Overwatch 2">
-                <span>Overwatch 2</span>
-            </a>
-        </div>
-        <div id="pubg">
-            <a class="game-link" id="pubg_game">
-                <img src="images/pubg.png" alt="PUBG">
-                <span>PUBG</span>
-            </a>
-        </div>
-        <div id="fortnite">
-            <a class="game-link" id="fortnite_game">
-                <img src="images/fortnite.png" alt="Fortnite">
-                <span>Fortnite</span>
-            </a>
-        </div>
-    </div>
-
 </div>
 
 <div class="myProfileFrame" style="display: none;">
@@ -171,10 +172,14 @@
                     <img src="images/user-placeholder.png" alt="User Picture">
                 </div>
                 <div class="profile-info">
-                    <p><span>Вік:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;21 рік</p>
-                    <p><span>Стать:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Чоловік</p>
-                    <p><span>Був онлайн:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;5 годин тому</p>
-                    <p><span>Дата реєстрації:</span> &emsp;&emsp;&emsp;&ensp;22.02.2024</p>
+                    <div>Вік:</div>
+                    <div>21 рік</div>
+                    <div>Стать:</div>
+                    <div>Чоловік</div>
+                    <div>Був онлайн:</div>
+                    <div>5 годин тому</div>
+                    <div>Дата реєстрації:</div>
+                    <div>22.02.2024</div>
                 </div>
             </div>
             <div class="profile-contacts">
@@ -214,11 +219,16 @@
                     <img src="images/user-placeholder.png" alt="User Picture">
                 </div>
                 <div class="profile-info">
-                    <p><span>Вік:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;20 рік</p>
-                    <p><span>Стать:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Жіноча</p>
-                    <p><span>Був онлайн:</span> &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;6 годин тому</p>
-                    <p><span>Дата реєстрації:</span> &emsp;&emsp;&emsp;&ensp;24.02.2023</p>
+                    <div>Вік:</div>
+                    <div>20 рік</div>
+                    <div>Стать:</div>
+                    <div>Жіноча</div>
+                    <div>Був онлайн:</div>
+                    <div>6 годин тому</div>
+                    <div>Дата реєстрації:</div>
+                    <div>24.02.2023</div>
                 </div>
+
             </div>
             <div class="profile-contacts">
                 <h4>Контакти</h4>
@@ -247,120 +257,122 @@
     </div>
 </div>
 
-<div class="applicationsFrame" style="display: none;">
-    <div class="application-frame">
-        <div class="application-header">
-            <h3>Заяви гравців у Valorant</h3>
-        </div>
-        <div class="application-grid">
-            <div class="application-grid-item">
-                <button>Шукаю напарника/напарницю
-                    для гри, здебільшого по фану,
-                    я Г2, твоє звання не важливо,
-                    якщо потрібно навчити, то
-                    розповім, що знаю сам, хоча
-                    самому варто було б повчитися <br>20років
-                </button>
+<div class="applicationsFrame" style="display: block;">
+    <div class="frame-wrapper">
+        <div class="application-frame">
+            <div class="application-header">
+                <h3>Заяви гравців у Valorant</h3>
             </div>
-            <div class="application-grid-item">
-                <button>Хлопець 25 років, шукаю тиммейтів
-                    для ігор у Валорант по фану
-                    і просто спілкування.
-                    Ранг від бронзи до золота 3.
-                    Спілкування через дс.
-                    Дс: beg1nnner
-                    Тг: Beg1nnnner<br>25років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>Шукаю напарника для рейтингу
-                    Від срібла до платини (я Срібло 3 -
-                    Максимум платина 2)
-                    від 16 років
-                    Додавайте в дс - 4ерноснейка.
-                    Не відповідаю на повідомлення
-                    на сайті!<br>17років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>Всім привіт) Шукаю напарників для
-                    спільної гри у бистрі. Хочеться разом кайфувати
-                    від грита розвиватися. Перший
-                    досвід у Валоранті, тому скіл
-                    слабкий, але завжди намагаюся
-                    викладатися на всю.
-                    <br>24років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>Привет! Меня зовут Артём,
-                    мне 21 год. Я ищу сокомандницу
-                    в возрасте от 18 до 22 лет для
-                    увлекательных игр, интересных
-                    разговорови просто приятного
-                    времяпровождения. 😊🎮🌟 Мой дс - lilxyper<br>21років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>Всім привіт. Буду радий партнеру
-                    для спільної гри. Нині з'явилося
-                    набагато більше вільного часу
-                    тому повернувся у валорант.<br>19років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>Всем привет, ищу команду для
-                    премьера и игр вместе с будущим
-                    развитием в киберспорт, роль могу
-                    занять любую, главное заранее
-                    узнать и начать готовиться,
-                    задротитьэту роль, сейчас
-                    звание д3 <br>20років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>Вітаю, шукаю тимейтів для
-                    приємногопроведення часу
-                    у Valorant.
-                    Я новачок у цій грі (ранг Бронза 2).
-                    Одному грати вкрай нудно,
-                    так що хотілося б знайти
-                    кого-небудь.<br>18років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>Просто провести гарно час,
-                    посміятися, рейт/анрейт.
-                    На ранг байдуже. Пік золото 2,
-                    зараз срібло 2. Головне щоб
-                    було весело))) telegram: wiseowlme<br>25років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>паті з двох челіків шукає снайпера,
-                    рифлера та саппорта для гри
-                    в рмм, рейтинг золото, бажаючі
-                    провести вечір у приємній
-                    компанії і попітніти пишіть)
-                    дс: killmebbking<br>20років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>Всім добрий вечір/день. Нещодавно
-                    почав грати, відкрив рейтинг,
-                    з героїв рейну та брич. Чесно
-                    скажу, взагалі не розумію що та як у
-                    цій грі, хотілося б знайти
-                    просто гравця який може навчити
-                    грати чи хоча б базовим речам.<br>22років
-                </button>
-            </div>
-            <div class="application-grid-item">
-                <button>Platinum2 шукаю команду/напарника
-                    щоб старатися у рангових іграх та
-                    прогресувати. Вся статистика та
-                    інша інфа в тг: t.me/KvooD37<br>17років
-                </button>
+            <div class="application-grid">
+                <div class="application-grid-item">
+                    <button>Шукаю напарника/напарницю
+                        для гри, здебільшого по фану,
+                        я Г2, твоє звання не важливо,
+                        якщо потрібно навчити, то
+                        розповім, що знаю сам, хоча
+                        самому варто було б повчитися <br>20років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Хлопець 25 років, шукаю тиммейтів
+                        для ігор у Валорант по фану
+                        і просто спілкування.
+                        Ранг від бронзи до золота 3.
+                        Спілкування через дс.
+                        Дс: beg1nnner
+                        Тг: Beg1nnnner<br>25років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Шукаю напарника для рейтингу
+                        Від срібла до платини (я Срібло 3 -
+                        Максимум платина 2)
+                        від 16 років
+                        Додавайте в дс - 4ерноснейка.
+                        Не відповідаю на повідомлення
+                        на сайті!<br>17років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Всім привіт) Шукаю напарників для
+                        спільної гри у бистрі. Хочеться разом кайфувати
+                        від грита розвиватися. Перший
+                        досвід у Валоранті, тому скіл
+                        слабкий, але завжди намагаюся
+                        викладатися на всю.
+                        <br>24років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Привет! Меня зовут Артём,
+                        мне 21 год. Я ищу сокомандницу
+                        в возрасте от 18 до 22 лет для
+                        увлекательных игр, интересных
+                        разговорови просто приятного
+                        времяпровождения. 😊🎮🌟 Мой дс - lilxyper<br>21років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Всім привіт. Буду радий партнеру
+                        для спільної гри. Нині з'явилося
+                        набагато більше вільного часу
+                        тому повернувся у валорант.<br>19років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Всем привет, ищу команду для
+                        премьера и игр вместе с будущим
+                        развитием в киберспорт, роль могу
+                        занять любую, главное заранее
+                        узнать и начать готовиться,
+                        задротитьэту роль, сейчас
+                        звание д3 <br>20років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Вітаю, шукаю тимейтів для
+                        приємногопроведення часу
+                        у Valorant.
+                        Я новачок у цій грі (ранг Бронза 2).
+                        Одному грати вкрай нудно,
+                        так що хотілося б знайти
+                        кого-небудь.<br>18років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Просто провести гарно час,
+                        посміятися, рейт/анрейт.
+                        На ранг байдуже. Пік золото 2,
+                        зараз срібло 2. Головне щоб
+                        було весело))) telegram: wiseowlme<br>25років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>паті з двох челіків шукає снайпера,
+                        рифлера та саппорта для гри
+                        в рмм, рейтинг золото, бажаючі
+                        провести вечір у приємній
+                        компанії і попітніти пишіть)
+                        дс: killmebbking<br>20років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Всім добрий вечір/день. Нещодавно
+                        почав грати, відкрив рейтинг,
+                        з героїв рейну та брич. Чесно
+                        скажу, взагалі не розумію що та як у
+                        цій грі, хотілося б знайти
+                        просто гравця який може навчити
+                        грати чи хоча б базовим речам.<br>22років
+                    </button>
+                </div>
+                <div class="application-grid-item">
+                    <button>Platinum2 шукаю команду/напарника
+                        щоб старатися у рангових іграх та
+                        прогресувати. Вся статистика та
+                        інша інфа в тг: t.me/KvooD37<br>17років
+                    </button>
+                </div>
             </div>
         </div>
     </div>

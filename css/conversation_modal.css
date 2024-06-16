@@ -158,3 +158,9 @@
     max-width: 15%;
     min-height: 40px;
 }
+
+@media (max-width: 480px) {
+    .chat-content {
+        top: 60px;
+    }
+}
